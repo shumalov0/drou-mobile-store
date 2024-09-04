@@ -1,27 +1,37 @@
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
-
 import { cn } from "../../lib/utils";
 
-const Accordion = AccordionPrimitive.Root;
+const Accordion = ({ children, ...props }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <>
+      <AccordionPrimitive.Root
+        {...props}
+        onValueChange={(value) => setIsOpen(!!value)}
+      >
+        {children}
+      </AccordionPrimitive.Root>
+      {isOpen && <Backdrop />} {/* Accordion açıldığında arka planı karart */}
+    </>
+  );
+};
 
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={cn("", className)}
-    {...props}
-  />
+  <AccordionPrimitive.Item ref={ref} className={cn("", className)} {...props} />
 ));
 AccordionItem.displayName = "AccordionItem";
 
 const AccordionTrigger = React.forwardRef(
   ({ className, children, ...props }, ref) => (
-    <AccordionPrimitive.Header className="flex bg-[#3333]">
+    <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         ref={ref}
         className={cn(
-          "flex flex-1 items-center justify-between py-4  transition-all  [&[data-state=open]>svg]:rotate-180 w-full text-my_white font-bold",
+          "flex flex-1 items-center justify-between py-4 transition-all w-full text-my_white font-bold",
+          "[&[data-state=open]>svg]:rotate-180",
           className
         )}
         {...props}
@@ -47,5 +57,12 @@ const AccordionContent = React.forwardRef(
 );
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+
+const Backdrop = () => (
+  <div
+    className=" aa fixed inset-0 bg-black opacity-50 z-10"
+    aria-hidden="true"
+  ></div>
+);
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
