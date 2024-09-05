@@ -5,7 +5,7 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 import { Link } from "react-router-dom";
-import Contact from "../pages/Contact";
+
 
 const HomePage = [
 
@@ -42,7 +42,7 @@ const HoverCards = () => {
   return (
     <div className="flex gap-2 lg:gap-5 items-center  ">
     
-    <HoverCard>
+    <HoverCard openDelay={0} closeDelay={0}>
 
       <HoverCardTrigger className=" cursor-pointer flex items-center hover:text-my_red  font-bold text-my_gray_Text relative">
          <Link to='/'>
@@ -59,7 +59,7 @@ const HoverCards = () => {
          </ul>
       </HoverCardContent>
     </HoverCard>
-    <HoverCard>
+    <HoverCard openDelay={0} closeDelay={0}>
       <HoverCardTrigger className=" text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold">
         <Link to='/product' >
         ELECTRONICS
@@ -72,7 +72,7 @@ const HoverCards = () => {
         The React Framework – created and maintained by @vercel.
       </HoverCardContent>
     </HoverCard>
-    <HoverCard>
+    <HoverCard openDelay={0} closeDelay={0}>
       <HoverCardTrigger className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold">
         <Link to='/blog'>
         BLOG
@@ -85,7 +85,7 @@ const HoverCards = () => {
         The React Framework – created and maintained by @vercel.
       </HoverCardContent>
     </HoverCard>
-    <HoverCard>
+    <HoverCard openDelay={0} closeDelay={0}>
       <HoverCardTrigger className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold">PAGES
       <i class="fa-solid fa-chevron-down "></i>
       </HoverCardTrigger>

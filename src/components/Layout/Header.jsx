@@ -4,7 +4,7 @@ import Logo from '../../Assets/Image/logo-Drou.png'
 import Selects from "../HomeUi/Select";
 import HoverCards from "../HomeUi/HoverCard";
 import SheetUi from "../HomeUi/SheetUi";
-import Search from "../HomeUi/Search";
+
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="sectionHeader border-b-[1px] border-solid border-my_gray py-[3px] hidden md:block">
+      <div className="sectionHeader transition border-b-[1px] border-solid border-my_gray py-[3px] hidden md:block">
         <div className="flex items-center justify-between container mx-auto px-8">
           <div className="headerBox flex items-center gap-2">
             <p className="font-medium text-[14px] border-r-[1px] border-solid border-gray px-1 text-my_gray_Text ">
@@ -61,15 +61,15 @@ const Header = () => {
       </div>
     <nav className={`transition-all ${isScrolled ? "fixed top-0 left-0 right-0 z-50 bg-white shadow-lg bg-my_white" : ""}`}>
       <div className="sectionMain px-8 py-4 flex items-center justify-between container mx-auto">
-        <div className="logo w-[166px] h-[60px]">
+        <div className="logo w-[166px] h-[60px] transition-all">
           <Link to="/">
             <img src={Logo} alt="logo" className="w-full h-full" />
           </Link>
         </div>
-        <div className="menuList hidden md:block">
+        <div className="menuList hidden md:block transition-all">
           <HoverCards />
         </div>
-        <div className="iconsMenu flex items-center gap-5 md:gap-3">
+        <div className="iconsMenu flex items-center gap-5 md:gap-3 transition-all">
           <i className="fa-solid fa-magnifying-glass text-[27px] cursor-pointer text-my_darkgray_Text"></i>
           <Link to="/wishlist">
             <i className="fa-regular fa-heart text-[27px] text-my_darkgray_Text"></i>
@@ -80,7 +80,7 @@ const Header = () => {
               0
             </span>
           </div>
-          <div className="burgerBar block md:hidden transition-all">
+          <div className="burgerBar block md:hidden transition-all ">
             <SheetUi />
           </div>
         </div>
