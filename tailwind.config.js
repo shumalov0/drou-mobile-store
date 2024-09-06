@@ -10,7 +10,9 @@ module.exports = {
   		my_orange: '#E52E05',
   		my_dark_gray: '#E7EBEE',
   		my_gray_Text: '#444444',
-  		my_darkgray_Text: '#333333'
+  		my_darkgray_Text: '#333333',
+  		bg_white: '#f8f8f8',
+		
   	},
   	fontFamily: {
   		cereb: 'CerebriSans'
