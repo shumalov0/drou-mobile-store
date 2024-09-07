@@ -27,14 +27,14 @@ const contactApi = [
 const ContactArea = () => {
   return (
     <div className="bg-bg_white py-8">
-      <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-around ">
+      <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-around  ">
         {contactApi.map((e,key) => (
-          <div key={key} className="listBox flex flex-col items-center">
+          <div key={key} className="listBox flex flex-col items-center gap-2">
             <img src={e.img} alt="usd" />
             <h2 className=" text-[20px] text-[#323232] font-bold">
               {e.title}
             </h2>
-            <p className="text-[18px] text-[#444] max-w-[230px] text-center">
+            <p className="text-[16px] text-[#444] max-w-[260px] text-center">
               {e.description}
             </p>
           </div>
