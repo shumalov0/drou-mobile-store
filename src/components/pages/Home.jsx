@@ -1,80 +1,12 @@
 
 import React from 'react'
+import ContactArea from '../HomeUi/ContactArea';
 
 const Home = () => {
   return (
-    <div className='text-3xl text-cyan-500'>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-      <h1>salam</h1>
-
-    </div>
+    < >
+        <ContactArea/>
+    </>
   )
 }
 

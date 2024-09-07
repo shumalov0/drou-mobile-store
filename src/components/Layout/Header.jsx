@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from '../../Assets/Image/logo-Drou.png'
+import Logo from "../../Assets/Image/logo-Drou.png";
 import Selects from "../HomeUi/Select";
 import HoverCards from "../HomeUi/HoverCard";
 import SheetUi from "../HomeUi/SheetUi";
-
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,33 +58,39 @@ const Header = () => {
           </div>
         </div>
       </div>
-    <nav className={`transition-all ${isScrolled ? "fixed top-0 left-0 right-0 z-50 bg-white shadow-lg bg-my_white" : ""}`}>
-      <div className="sectionMain px-8 py-4 flex items-center justify-between container mx-auto">
-        <div className="logo w-[166px] h-[60px] transition-all">
-          <Link to="/">
-            <img src={Logo} alt="logo" className="w-full h-full" />
-          </Link>
-        </div>
-        <div className="menuList hidden md:block transition-all">
-          <HoverCards />
-        </div>
-        <div className="iconsMenu flex items-center gap-5 md:gap-3 transition-all">
-          <i className="fa-solid fa-magnifying-glass text-[27px] cursor-pointer text-my_darkgray_Text"></i>
-          <Link to="/wishlist">
-            <i className="fa-regular fa-heart text-[27px] text-my_darkgray_Text"></i>
-          </Link>
-          <div className="relative">
-            <i className="fa-solid fa-bag-shopping text-[27px] cursor-pointer text-my_darkgray_Text"></i>
-            <span className="absolute w-[10px] h-[10px] bg-my_orange bottom-[-3px] left-3 flex items-center justify-center p-2 rounded-lg text-my_white text-[10px] font-bold">
-              0
-            </span>
+      <nav
+        className={`transition-all ${
+          isScrolled
+            ? "fixed top-0 left-0 right-0 z-50 bg-white shadow-lg bg-my_white"
+            : ""
+        }`}
+      >
+        <div className="sectionMain px-8 py-4 flex items-center justify-between container mx-auto">
+          <div className="logo flex items-center w-[166px]  transition-all">
+            <Link to="/">
+              <img src={Logo} alt="logo" className="w-full " />
+            </Link>
           </div>
-          <div className="burgerBar block md:hidden transition-all ">
-            <SheetUi />
+          <div className="menuList hidden md:block transition-all">
+            <HoverCards />
+          </div>
+          <div className="iconsMenu flex items-center gap-5 md:gap-3 transition-all">
+            <i className="fa-solid fa-magnifying-glass text-[20px] cursor-pointer text-my_darkgray_Text"></i>
+            <Link to="/wishlist">
+              <i className="fa-regular fa-heart text-[20px] text-my_darkgray_Text"></i>
+            </Link>
+            <div className="relative">
+              <i className="fa-solid fa-bag-shopping text-[20px] cursor-pointer text-my_darkgray_Text"></i>
+              <span className="absolute w-[10px] h-[10px] bg-my_orange bottom-[-3px] left-3 flex items-center justify-center p-2 rounded-lg text-my_white text-[10px] font-bold">
+                0
+              </span>
+            </div>
+            <div className="burgerBar block md:hidden transition-all ">
+              <SheetUi />
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     </>
   );
 };

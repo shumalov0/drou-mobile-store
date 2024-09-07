@@ -16,7 +16,7 @@ const SheetUi = () => {
   return (
     <Sheet >
       <SheetTrigger>
-        <i class="fa-solid fa-bars text-[30px] cursor-pointer"></i>
+        <i class="fa-solid fa-bars text-[20px] cursor-pointer"></i>
       </SheetTrigger>
       <SheetContent side={"left"}>
         <SheetHeader>
