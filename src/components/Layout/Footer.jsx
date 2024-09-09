@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="">
       <div className="container mx-auto px-8 flex-wrap py-[70px]">
-        <div className="footerList flex items-start justify-between flex-wrap">
+        <div className="footerList flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-start flex-wrap ">
           <div className="listBox">
             <h2 className="text-[20px] font-bold pb-4">Contact us</h2>
             <ul className=" flex flex-col gap-3">
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
       </div>
         <div className="footerBottom bg-bg_white mt-4">
-          <div className="container mx-auto px-8 flex items-center justify-between flex-wrap py-5 ">
+          <div className="container mx-auto px-8 flex  items-center justify-center md:justify-between text-center md:text-start flex-wrap py-5 ">
 
           <div className="Footertext">
           Copyright © Team90Degree | Built with Drou by Team90Degree.

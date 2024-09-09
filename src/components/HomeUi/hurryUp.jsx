@@ -10,7 +10,7 @@ const HurryUp = () => {
     } else {
       return (
         <div>
-          <ul className="flex items-center">
+          <ul className="flex items-center gap-3">
             <li className="flex flex-col items-center justify-center h-[80px] w-[80px] shadow-[0_0_10px_#0000001a]  rounded-[16px]">
               <h2 className="text-[21px] font-bold"> {days}</h2>
               <span className="text-my_gray_Text text-[12px]">DAYS</span>
@@ -36,7 +36,7 @@ const HurryUp = () => {
   };
 
   return (
-    <div className="bg-hurry-up py-9 bg-my_dark_gray md:bg-my_white">
+    <div className="bg-hurry-up pt-[50px]  bg-my_dark_gray">
       <img
         src={hurrtUpImg}
         alt="hurryupimg"
