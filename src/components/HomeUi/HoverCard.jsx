@@ -95,7 +95,7 @@ const HoverCards = () => {
           <i class="fa-solid fa-chevron-down "></i>
         </HoverCardTrigger>
 
-        <HoverCardContent>
+        <HoverCardContent >
          <ul className="flex items-center flex-col">
           <li><Link className="text-[17px] text-my_gray_Text font-semibold hover:text-my_orange transition-all" to="/faq">Faq</Link></li>
           <li><Link className="text-[17px] text-my_gray_Text font-semibold hover:text-my_orange transition-all" to="/blog">Blog</Link></li>
