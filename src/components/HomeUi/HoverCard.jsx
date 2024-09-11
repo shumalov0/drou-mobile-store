@@ -48,16 +48,16 @@ const HoverCards = () => {
   return (
     <div className="flex gap-2 lg:gap-5 items-center  ">
       <HoverCard openDelay={0} closeDelay={0}>
-        <HoverCardTrigger className=" cursor-pointer flex items-center hover:text-my_red  font-bold text-my_gray_Text relative">
+        <HoverCardTrigger className=" cursor-pointer flex items-center hover:text-my_red  font-semibold text-my_gray_Text relative">
           <Link to="/">
             <span className="absolute top-[-17px] left-[0] rounded-lg px-1 bg-my_red text-my_white text-[11px] before:absolute before:rotate-[50deg]   before:bg-my_red before:content-[''] before:bottom-[-0.8px] before:w-[5px] before:h-[5px] ">
               new
             </span>
             HOME
-            <i class="fa-solid fa-chevron-down "></i>
+         
           </Link>
         </HoverCardTrigger>
-        <HoverCardContent>
+        {/* <HoverCardContent>
           <ul className="flex items-center flex-col gap-5">
             {HomePage.map((pages) => (
               <li className=" cursor-pointer hover:text-my_red hover:font-bold">
@@ -65,44 +65,45 @@ const HoverCards = () => {
               </li>
             ))}
           </ul>
-        </HoverCardContent>
+        </HoverCardContent> */}
       </HoverCard>
       <HoverCard openDelay={0} closeDelay={0}>
-        <HoverCardTrigger className=" text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold">
+        <HoverCardTrigger className=" text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-semibold">
           <Link to="/product">
             ELECTRONICS
-            <i class="fa-solid fa-chevron-down "></i>
+       
           </Link>
         </HoverCardTrigger>
 
-        <HoverCardContent>
+        {/* <HoverCardContent>
           
-        </HoverCardContent>
+        </HoverCardContent> */}
       </HoverCard>
       <HoverCard openDelay={0} closeDelay={0}>
-        <HoverCardTrigger className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold">
+        <HoverCardTrigger className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-semibold">
           <Link to="/blog">
             BLOG
-            <i class="fa-solid fa-chevron-down "></i>
+           
           </Link>
         </HoverCardTrigger>
 
-        <HoverCardContent>
-          The React Framework – created and maintained by @vercel.
-        </HoverCardContent>
+
       </HoverCard>
       <HoverCard openDelay={0} closeDelay={0}>
-        <HoverCardTrigger className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold">
+        <HoverCardTrigger className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-semibold">
           PAGES
           <i class="fa-solid fa-chevron-down "></i>
         </HoverCardTrigger>
 
         <HoverCardContent>
-          The React Framework – created and maintained by @vercel.
+         <ul className="flex items-center flex-col">
+          <li><Link className="text-[17px] text-my_gray_Text font-semibold hover:text-my_orange transition-all" to="/faq">Faq</Link></li>
+          <li><Link className="text-[17px] text-my_gray_Text font-semibold hover:text-my_orange transition-all" to="/blog">Blog</Link></li>
+         </ul>
         </HoverCardContent>
         <Link
           to="/contact"
-          className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-bold"
+          className="  text-my_gray_Text cursor-pointer flex items-center hover:text-my_red  font-semibold"
         >
           CONTACT
         </Link>
