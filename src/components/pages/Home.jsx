@@ -6,6 +6,7 @@ import HurryUp from '../HomeUi/hurryUp';
 import Banner from '../HomeUi/Banner';
 import AppleSlider from '../HomeUi/AppleSlider';
 import TrendingCategories from '../HomeUi/TrendingCategories';
+import LastestProduct from '../HomeUi/LastestProduct';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <AppleSlider/>
         <TrendingCategories/>
         <Banner/>
+        <LastestProduct/>
         <HurryUp/>
         <BigDiscount/>
         <ContactArea/>
