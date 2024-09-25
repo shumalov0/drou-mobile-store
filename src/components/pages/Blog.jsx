@@ -1,6 +1,7 @@
 import React from 'react'
 import BreadCumb from '../HomeUi/BreadCumb'
 import Search from '../HomeUi/Search'
+import BlogCardMain from '../BlogUi/BlogCardMain'
 import RecentCard from '../BlogUi/RecentCard'
 const Blog = () => {
   return (
@@ -34,7 +35,18 @@ const Blog = () => {
 
           </div>
           <div className="main flex-[2]">
-            salam
+            <div className="blogCardList flex flex-wrap gap-4 items-center justify-center">
+
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+           <BlogCardMain/>
+            </div>
           </div>
       </div>
        
