@@ -1,9 +1,11 @@
 import React from 'react'
 import iphoneLarge from "../../Assets/Image/iphone-large.webp"
+import { Link } from 'react-router-dom'
 
 const ProductCard = () => {
   return (
-    <div className='flex flex-col max-w-[270px] items-center shadow-lg pb-4 relative overflow-hidden group'>
+    <Link to='/product/1'>
+    <div className='flex flex-col max-w-[270px] items-center shadow-lg pb-4 relative overflow-hidden group cursor-pointer'>
       <div className="imgBox relative">
         <img src={iphoneLarge} className='transition-all duration-500  group-hover:scale-110 ease-in-out' alt="imgPhone" />
    
@@ -28,6 +30,7 @@ const ProductCard = () => {
         </div>
       </div>
     </div>
+    </Link>
   )
 }
 

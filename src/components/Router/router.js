@@ -9,7 +9,10 @@ import Contact from '../pages/Contact'
 import Error from '../pages/Error'
 import { Routes,Route } from 'react-router-dom'
 import Login from '../pages/Login'
-import Privacy from '../pages/Privacy'
+import { Wallet } from 'lucide-react'
+import WishList from '../pages/WishList'
+
+
 
 const router = () => {
   return (
@@ -21,9 +24,10 @@ const router = () => {
         <Route path='/register' element={<Register/>}  />
         <Route path='/login' element={<Login/>}  />
         <Route path='/contact' element={<Contact/>}  />
+        <Route path='/wishlist' element={<WishList/>}  />
         <Route path='/product' element={<Product/>}  />
-        <Route path='/product:id' element={<ProductDetail/>}  />
-        <Route path='/privacy' element={<Privacy/>}  />
+        <Route path='/product/:id' element={<ProductDetail/>}  />
+
         <Route path='*' element={<Error/>}  />
     </Routes>
     
