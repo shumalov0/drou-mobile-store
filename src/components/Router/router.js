@@ -11,6 +11,7 @@ import { Routes,Route } from 'react-router-dom'
 import Login from '../pages/Login'
 import { Wallet } from 'lucide-react'
 import WishList from '../pages/WishList'
+import Basket from '../pages/Basket'
 
 
 
@@ -25,6 +26,7 @@ const router = () => {
         <Route path='/login' element={<Login/>}  />
         <Route path='/contact' element={<Contact/>}  />
         <Route path='/wishlist' element={<WishList/>}  />
+        <Route path='/basket' element={<Basket/>}  />
         <Route path='/product' element={<Product/>}  />
         <Route path='/product/:id' element={<ProductDetail/>}  />
 

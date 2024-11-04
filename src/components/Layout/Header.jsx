@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../Assets/Image/logo-Drou.png";
 import Selects from "../HomeUi/Select";
 import HoverCards from "../HomeUi/HoverCard";
 import SheetUi from "../HomeUi/SheetUi";
+import LoginButton from "../HomeUi/LoginButton";
+import UserBadge from "../HomeUi/UserBadge";
+import { CartContext } from '../../components/context/cardContext';
 
 const Header = () => {
+  const { cartItems } = useContext(CartContext);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const firstName = JSON.parse(localStorage.getItem("firstName"));
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -48,12 +52,7 @@ const Header = () => {
               </span>
             </div>
             <div className="border-l-[1px] border-solid bordee-gray login/SignUp flex items-center cursor-pointer">
-              <Link
-                className="font-medium px-4 text-[14px] text-my_gray_Text"
-                to="/login"
-              >
-                Log In / Sign Up
-              </Link>
+            {firstName ? <UserBadge name={firstName} /> : <LoginButton />}
             </div>
           </div>
         </div>
@@ -79,12 +78,14 @@ const Header = () => {
             <Link to="/wishlist">
               <i className="fa-regular fa-heart text-[20px] text-my_darkgray_Text"></i>
             </Link>
+            <Link to="/basket">
             <div className="relative">
               <i className="fa-solid fa-bag-shopping text-[20px] cursor-pointer text-my_darkgray_Text"></i>
               <span className="absolute w-[10px] h-[10px] bg-my_orange bottom-[-3px] left-3 flex items-center justify-center p-2 rounded-lg text-my_white text-[10px] font-bold">
-                0
+              {cartItems.length}
               </span>
             </div>
+            </Link>
             <div className="burgerBar block md:hidden transition-all ">
               <SheetUi />
             </div>

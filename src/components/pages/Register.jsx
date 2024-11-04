@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import BreadCumb from "../HomeUi/BreadCumb";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -10,8 +11,19 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  const submitForm = (data) => {
-    console.log(data);
+  const submitForm = async (data) => {
+    console.log(data)
+    try {
+    await axios.post("https://drou-electronics-store.onrender.com/api/v1/auth/register", data).then((res)=>{
+      console.log(res)
+    });
+      
+
+      // console.log("Registration successful:", response.data);
+      
+    } catch (error) {
+      // console.error("Registration failed:", error.response.data);
+    }
   };
 
   return (
@@ -25,31 +37,52 @@ const Register = () => {
           </div>
           <form onSubmit={handleSubmit(submitForm)} className="flex items-center flex-col">
             <div className="flex flex-col items-between gap-9">
-            
               <div className="inputBox flex items-start justify-between">
-                <label className="mt-1" htmlFor="username">Username</label>
+                <label className="mt-1" htmlFor="firstName">firstName</label>
                 <div className="flex-col flex items-center">
                   <input
                     className="bg-[#ebebeb] outline-none px-[15px] py-[5px] focus:bg-my_white focus:border focus:border-current focus:rounded"
-                    {...register("username", {
-                      required: "Username is required",
+                    {...register("firstName", {
+                      required: "firstName is required",
                       minLength: {
                         value: 3,
-                        message: "Username must be at least 3 characters long",
+                        message: "firstName must be at least 3 characters long",
                       },
                     })}
                     type="text"
-                    placeholder="Username"
-                    name="username"
+                    placeholder="firstName"
+                    name="firstName"
                   />
-                  {errors.username && (
+                  {errors.firstName && (
                     <p className="error-message text-my_orange text-[13px] font-medium">
-                      {errors.username.message}
+                      {errors.firstName.message}
                     </p>
                   )}
                 </div>
               </div>
-       
+              <div className="inputBox flex items-start justify-between">
+                <label className="mt-1" htmlFor="lastName">lastName</label>
+                <div className="flex-col flex items-center">
+                  <input
+                    className="bg-[#ebebeb] outline-none px-[15px] py-[5px] focus:bg-my_white focus:border focus:border-current focus:rounded"
+                    {...register("lastName", {
+                      required: "lastName is required",
+                      minLength: {
+                        value: 3,
+                        message: "lastName must be at least 3 characters long",
+                      },
+                    })}
+                    type="text"
+                    placeholder="lastName"
+                    name="lastName"
+                  />
+                  {errors.lastName && (
+                    <p className="error-message text-my_orange text-[13px] font-medium">
+                      {errors.lastName.message}
+                    </p>
+                  )}
+                </div>
+              </div>
               <div className="inputBox flex items-start justify-between">
                 <label className="mt-1" htmlFor="email">Email</label>
                 <div className="flex-col flex items-center">
@@ -73,7 +106,6 @@ const Register = () => {
                   )}
                 </div>
               </div>
-            
               <div className="inputBox flex items-start justify-between">
                 <label className="mt-1" htmlFor="password">Password</label>
                 <div className="flex-col flex items-center">
@@ -106,7 +138,7 @@ const Register = () => {
             </button>
           </form>
           <Link className="mt-10 pt-6 border-t-[1px] border-[#3333] w-full text-center" to="/login">
-            Already have an account? Sign In
+            Already have an account? Sign in
           </Link>
         </div>
       </div>
